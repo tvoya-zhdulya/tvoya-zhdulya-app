@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnBackToList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Список людей"
+            android:backgroundTint="#E91E63"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/btnChangePerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сменить"
+                android:backgroundTint="#E91E63"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvCounter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="#E91E63"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/ivCat"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerInside"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvQuote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Загрузка цитаты..."
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="#FFF0F5"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnPrevMonth"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="&lt;"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tvMonthYear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/btnNextMonth"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="&gt;"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/calendarGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Как ты себя чувствуешь сегодня?"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/moodButtonsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:background="#F5F5F5"/>
+
+        <TextView
+            android:id="@+id/tvMoodToday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Настроение: не выбрано"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tvEventInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#E91E63"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/layoutNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Твои мысли:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etThoughts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="О чем ты думаешь?"
+                android:minLines="3"
+                android:gravity="top|start"
+                android:inputType="textMultiLine"/>
+
+            <Button
+                android:id="@+id/btnSaveThoughts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E91E63"
+                android:textColor="#FFFFFF"
+                android:text="Сохранить мысли"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAddEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Запланировать встречу / передачку"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#E91E63"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+</ScrollView>
